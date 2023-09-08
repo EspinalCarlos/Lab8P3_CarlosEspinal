@@ -1,20 +1,72 @@
-// Lab8P3_CarlosEspinal.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <vector>
+#include <string>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+using namespace std;
+
+void mainmenu() {
+    cout << "---- Menu Principal ----\n" << "1. Agregar Vehiculo\n" << "2. Listar Vehiculos\n" << "3. Leer archivos\n"<<"4. Asignar Viajes\n" << "5. Guardar informacion de viajes\n" << "6. SALIDA\n" << "Ingrese la opcion que desea utilizar: ";
+}
+void menuvehiculo() {
+    cout << "---- Vehiculos ----\n" << "1. Camion\n"<<"2. Furgon\n" << "3. Motocicleta\n" << "Ingrese la opcion que desea usar: ";
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+int main(){
+    int opcion;
+    do {
+        mainmenu();
+        cin >> opcion;
+        cout << endl;
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+
+        int opcionV;
+        float cap, vel, con;
+        string type;
+        switch (opcion) {
+            case 1:
+                menuvehiculo();
+                cin >> opcionV;
+                switch (opcionV) {
+                    case 1:
+                        cout << "Ingrese la capacidad: ";
+                        cin >> cap;
+                        cout << endl;
+                        cout << "Ingrese la velocidad: ";
+                        cin >> vel;
+                        cout << endl;
+                        cout << "Ingrese el consumo: ";
+                        cin >> con;
+                        cout << endl;
+                        cout << "Ingrese el tipo: ";
+                        cin.ignore();
+                        getline(cin, type);
+
+                        break;
+                    case 2:
+                        cout << "Ingrese la capacidad: ";
+                        cin >> cap;
+                        cout << endl;
+                        cout << "Ingrese la velocidad: ";
+                        cin >> vel;
+                        cout << endl;
+                        cout << "Ingrese el consumo: ";
+                        cin >> con;
+                        cout << endl;
+                        break;
+                    case 3:
+                        cout << "Ingrese la capacidad: ";
+                        cin >> cap;
+                        cout << endl;
+                        cout << "Ingrese la velocidad: ";
+                        cin >> vel;
+                        cout << endl;
+                        cout << "Ingrese el consumo: ";
+                        cin >> con;
+                        cout << endl;
+                        break;
+                }
+                break;
+
+        }
+    } while(opcion != 6);
+}
