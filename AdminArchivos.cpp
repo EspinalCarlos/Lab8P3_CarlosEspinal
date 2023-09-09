@@ -25,7 +25,6 @@ void AdminArchivos::leerViajes() {
         ciudad = tokens.at(0);
         distancia = stof(tokens.at(1));
         carga = stof(tokens.at(2));
-        cout << distancia << endl;
         viajes.push_back(new Viaje(ciudad, distancia, carga));
 
         tokens.clear();
