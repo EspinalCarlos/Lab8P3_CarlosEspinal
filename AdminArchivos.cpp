@@ -25,8 +25,10 @@ void AdminArchivos::leerViajes() {
         ciudad = tokens.at(0);
         distancia = stof(tokens.at(1));
         carga = stof(tokens.at(2));
-        tokens.clear();
+        cout << distancia << endl;
         viajes.push_back(new Viaje(ciudad, distancia, carga));
+
+        tokens.clear();
 
     }
 
@@ -47,3 +49,15 @@ AdminArchivos::~AdminArchivos() {
     viajes.clear();
 }
 
+void AdminArchivos::guardarResultados() {
+    ofstream output(archivoResultados);
+
+    if (output.is_open()){
+        for (Viaje* v : viajes) {
+            if (v->getVehiculo() != NULL) {
+                output << v->getCiudad() << ","<< v->getDistancia()<< "," << v->getCarga()<<"," << " Vehiculo: " << v->getVehiculo()->getCapacidad() << "," << v->getVehiculo()->getConsumo() << "," << v->getVehiculo()->getVelocidad() << endl;
+            }
+        }
+        output.close();
+    }
+}

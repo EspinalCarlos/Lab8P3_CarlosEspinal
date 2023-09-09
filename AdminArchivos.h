@@ -12,8 +12,10 @@ class AdminArchivos{
 
 public:
 	AdminArchivos(const string AViajes, const string AResultados);
+	~AdminArchivos();
 	void leerViajes();
 	void guardarResultados();
 	void printViajes();
+	vector<Viaje*> getVectorViajes();
 };
 

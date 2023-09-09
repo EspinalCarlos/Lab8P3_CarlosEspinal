@@ -5,11 +5,13 @@
 using namespace std;
 
 Viaje::Viaje(string ciudad, float distanica, float carga) {
-	this->ciudad = ciudad;
-	this->distancia = distancia;
+	this->ciudad = ciudad; 
+	this->distancia = distanica; 
 	this->carga = carga;
 }
-Viaje::~Viaje(){}
+Viaje::~Viaje(){
+	delete vehiculo;
+}
 
 void Viaje::setCarga(float carga) {
 	this->carga = carga;
