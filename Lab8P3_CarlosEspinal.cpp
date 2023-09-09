@@ -24,6 +24,12 @@ void imprimirLista(vector<T> vec) {
         posc++;
     }
 }
+template<typename T>
+void freeMemory(vector<T> vec) {
+    for (T t : vec) {
+        delete t;
+    }
+}
 
 int main(){
     int opcion;
@@ -140,4 +146,8 @@ int main(){
 
         }
     } while(opcion != 6);
+    freeMemory<Motocicleta*>(motos);
+    freeMemory<Furgon*>(furgones);
+    freeMemory<Camion*>(camiones);
+
 }
