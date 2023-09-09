@@ -3,7 +3,9 @@
 class Furgon:public Vehiculo{
 	int ejes;
 public:
-	Furgon(float capacidad, float velocidad, float consumo, int ejes);
+	Furgon(int ejes);
 	~Furgon();
+	int getEjes();
+	void setEjes(int ejes);
 };
 

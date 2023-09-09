@@ -1,0 +1,10 @@
+Choluteca, 90, 0.4
+Puerto Cortés, 180, 2
+Siguatepeque, 110, 7
+Catacamas, 160, 0.2
+Comayagua, 90, 8
+San Pedro Sula, 160, 3.5
+Tegucigalpa, 80, 0.35
+Juticalpa, 140, 8.5
+Gracias, 200, 4.5
+Santa Rosa de Copán, 250, 4.9
